@@ -9,8 +9,15 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        change: 'black',
+        primary: '#FDDD64',
       },
+      fontFamily: {
+        sans: ['Josefin Sans', 'Arial', 'sans-serif'],
+        handwritting: ['Adlery Pro', 'sans-serif']
+      },
+      gridTemplateColumns: {
+        services: '150px 1fr'
+      }
     },
   },
   variants: {},

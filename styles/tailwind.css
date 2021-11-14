@@ -7,3 +7,57 @@
     color: transparent;
   }
 }
+
+@layer base {
+  @font-face {
+    font-family: 'Adlery Pro';
+    src: url('assets/fonts/adlery-pro-webfont.woff2') format('woff2'),
+         url('assets/fonts/adlery-pro-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Josefin Sans';
+    src: url('assets/fonts/josefinsans-bold-webfont.woff2') format('woff2'),
+         url('assets/fonts/josefinsans-bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Josefin Sans';
+    src: url('assets/fonts/josefinsans-regular-webfont.woff2') format('woff2'),
+    url('assets/fonts/josefinsans-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  h1.logo {
+    text-align: center;
+    @apply font-handwritting;
+    @apply text-5xl;
+    @apply mb-8;
+  }
+
+  h2 {
+    @apply text-4xl;
+    @apply font-sans;
+    @apply my-8;
+
+    font-weight: bold;
+  }
+  h3 {
+    @apply font-sans;
+  
+    font-weight: bold;
+
+  }
+  p {
+    @apply font-sans;
+  }
+
+  .subtitle {
+    @apply font-sans;
+    text-align: center;
+    font-weight: bold;
+  }
+}
