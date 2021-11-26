@@ -31,6 +31,11 @@
     font-style: normal;
   }
 
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
   h1.logo {
     text-align: center;
     @apply font-handwritting;
@@ -60,4 +65,22 @@
     text-align: center;
     font-weight: bold;
   }
+
+  .button {
+    @apply border-2
+    border-black
+    rounded-lg
+    py-2
+    px-4
+    uppercase
+    hover:translate-x-1 hover:-translate-y-1 hover:shadow-cta transition;
+  }
+
+  .button.primaryBg {
+    @apply hover:shadow-ctaBg;
+  }
 }
+/* 
+svg.svg {
+  min-width: 550px;
+} */
