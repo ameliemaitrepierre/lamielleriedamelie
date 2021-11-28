@@ -40,13 +40,14 @@
     text-align: center;
     @apply font-handwritting;
     @apply text-5xl;
-    @apply mb-8;
+    @apply md:text-7xl;
+    @apply mb-14;
   }
 
   h2 {
     @apply text-4xl;
     @apply font-sans;
-    @apply my-8;
+    @apply mb-8;
 
     font-weight: bold;
   }
@@ -61,9 +62,8 @@
   }
 
   .subtitle {
-    @apply font-sans;
-    text-align: center;
-    font-weight: bold;
+    @apply font-sans text-center font-bold tracking-wider;
+    @apply md:text-2xl;
   }
 
   .button {

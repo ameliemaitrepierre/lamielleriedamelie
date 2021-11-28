@@ -13,5 +13,10 @@
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1",
     "html-minifier": "^4.0.0"
+  },
+  "dependencies": {
+    "global": "^4.4.0",
+    "tailwind": "^4.0.0",
+    "tailwindcss": "^2.2.19"
   }
 }
