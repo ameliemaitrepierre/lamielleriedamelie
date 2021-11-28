@@ -2,7 +2,7 @@
 <html lang="fr">
   <head>
     <title>
-      {% block title %}Does it work?{% endblock %}
+      {{ title }}
     </title>
     <meta charset="UTF-8"/>
     {% if description %}
@@ -21,8 +21,6 @@
     <meta name="theme-color" content="#ffffff">
   </head>
   <body>
-    {% block content %}
       {{ content | safe }}
-    {% endblock %}
   </body>
 </html>
