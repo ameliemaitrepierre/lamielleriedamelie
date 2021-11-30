@@ -66,7 +66,7 @@ title: La Miellerie d'Amélie - Accueil
 </div>
 
 {# <img src="assets/img/honey-half.svg" class="w-full" /> #}
-<div class="px-4 mb-8 md:grid">
+<div class="px-4 my-20 md:grid grid-cols-3 gap-8 container mx-auto">
   {# À la confluence de l'Oise et de la Seine, la Miellerie d'Amélie vous souhaite la bienvenue ! #}
   <div class="description mt-4 mb-8 md:mt-0">
     {% set title = 'Présentation' %}
@@ -80,86 +80,94 @@ title: La Miellerie d'Amélie - Accueil
     De la primaire au collège, tout est bon pour parler abeille !
     </p>
   </div>
-  <div class="">
-    <img src="assets/img/rucher-de-neuville.jpeg" class="w-full h-52 object-cover rounded-xl" />
+  <div>
+    <img src="assets/img/rucher-de-neuville.jpeg" class="w-full h-60 object-cover rounded-xl" />
+  </div>
+  <div class="hidden md:block">
+    <img src="assets/img/rucher.jpeg" class="w-full h-60 object-cover rounded-xl" />
   </div>
 </div>
 <img src="assets/img/honey-half.svg" class="w-full" />
 <div class="py-4 bg-primary">
-  <div class="services mb-8 px-4">
-    {% set title = 'Nos services' %}
-    {% set color = 'dark' %}
-    {% include "components/title.njk" %}
-    <div class="relative border-solid border-black border-2 rounded-xl p-4 mt-16">
-      <div class="absolute -top-4 px-2">
-        <h3 class="px-2 bg-primary font-bold text-lg flex">
-          <img src="assets/img/honey.png" class="w-8 inline p-0 mr-4 ml-2" />
-          Vente de miel
-        </h3>
-      </div>
-      <div class="pt-4 text-justify">
-        Description vente de miel, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do e labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-Si vous voulez acheter notre miel, <a class="underline">contactez-nous</a>
-      </div>
+  <div class="services mb-14 px-4 container mx-auto">
+    <div class="text-center mt-12 mb-24">
+      {% set title = 'Nos services' %}
+      {% set color = 'dark' %}
+      {% include "components/title.njk" %}
     </div>
-    <div class="relative border-solid border-black border-2 rounded-xl p-4 mt-16">
-      <div class="absolute -top-4 px-2">
-        <h3 class="px-2 bg-primary font-bold text-lg flex">
-          <img src="assets/img/beehive.png" class="w-10 inline p-0 mr-4 ml-2" />
-          Parrainage de ruche
-        </h3>
+    <div class="md:flex justify-around">
+      <div class="relative border-solid border-black border-2 rounded-xl py-8 px-6 max-w-[310px]">
+        <div class="absolute -top-4 px-2">
+          <h3 class="px-2 bg-primary font-bold text-lg flex">
+            <img src="assets/img/honey.png" class="w-8 inline p-0 mr-4 ml-2" />
+            Vente de miel
+          </h3>
+        </div>
+        <div class="pt-4 text-center">
+          Description vente de miel, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do e labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+  Si vous voulez acheter notre miel, <a class="underline">contactez-nous</a>
+        </div>
       </div>
-      <div class="pt-4 text-justify">
-        Description Parrainage de ruche, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do e labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-Si vous voulez acheter notre miel, <a class="underline">contactez-nous</a>
+      <div class="relative border-solid border-black border-2 rounded-xl py-8 pl-5 pr-6 max-w-[310px]">
+        <div class="absolute -top-4 px-2">
+          <h3 class="pr-2 bg-primary font-bold text-lg flex">
+            <img src="assets/img/beehive.png" class="w-10 inline p-0 mr-4 ml-2" />
+            Parrainage de ruche
+          </h3>
+        </div>
+        <div class="pt-4 text-center">
+          Description Parrainage de ruche, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do e labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+  Si vous voulez acheter notre miel, <a class="underline">contactez-nous</a>
+        </div>
       </div>
-    </div>
-    <div class="relative border-solid border-black border-2 rounded-xl p-4 mt-16">
-      <div class="absolute -top-4 px-2">
-        <h3 class="px-2 bg-primary font-bold text-lg flex">
-        <img src="assets/img/presentation.png" class="w-10 inline p-0 mr-4 ml-2" />
-          Intervention
-        </h3>
-      </div>
-      <div class="pt-4 text-justify">
-        Description Intervention, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do e labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-Si vous voulez acheter notre miel, <a class="underline">contactez-nous</a>
+      <div class="relative border-solid border-black border-2 rounded-xl py-8 px-6 max-w-[310px]">
+        <div class="absolute -top-4 px-2">
+          <h3 class="px-2 bg-primary font-bold text-lg flex">
+          <img src="assets/img/presentation.png" class="w-10 inline p-0 mr-4 ml-2" />
+            Intervention
+          </h3>
+        </div>
+        <div class="pt-4 text-center">
+          Description Intervention, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do e labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+  Si vous voulez acheter notre miel, <a class="underline">contactez-nous</a>
+        </div>
       </div>
     </div>
   </div>
 </div>
 <img src="assets/img/honey-half.svg" class="w-full rotate-180" />
-<div class="actualites mt-4 px-4 pb-8">
-  <ul>
-  {%- for post in collections.post | head(-3) -%}
-    <li>
-      {{ post.data.title }}
-      <br>{{ post.templateContent | safe }}
-      <a href="{{post.url}}">Lien</a>
-      </li>
-  {%- endfor -%}
-  </ul>
-    {% set title = 'Nos actualités' %}
-    {% set color = 'bright' %}
-    {% include "components/title.njk" %}
-    <div class="border-solid border-2 border-black rounded-xl mb-8 overflow-hidden shadow-cta hover:shadow-ctaHover hover:translate-x-1 hover:-translate-y-1 transition">
-      <a href="">
-        <div class="h-64 overflow-hidden">
-          <img src="assets/img/ruchier.jpeg" class="w-full" />
-        </div>
-        <p class="p-4">Réussite de l'appel au vote 7000€ pour le rucher !
-        </p>
-        {# <div class="text-right pb-2 px-4">
-            Lire la suite
-        </div> #}
-      </a>
+<div class="actualites mt-4 px-4 pb-8 container mx-auto">
+    <div class="text-center mt-12 mb-20">
+      {% set title = 'Nos actualités' %}
+      {% set color = 'bright' %}
+      {% include "components/title.njk" %}
     </div>
+    <div class="container md:flex justify-center">
+      {%- for post in collections.post | head(-3) -%}
+        <div class="
+        border-solid border-2 border-black
+        mx-8
+        max-w-[270px]
+        rounded-xl mb-8 overflow-hidden shadow-cta hover:shadow-ctaHover hover:translate-x-1 hover:-translate-y-1 transition">
+          <a href="">
+            <div class="h-64 overflow-hidden">
+              <img src="assets/img/ruchier.jpeg" class="w-full" />
+            </div>
+            <p class="p-4">{{ post.data.title }}
+            </p>
+            <p>{{ post.templateContent | safe }}</p>
+            <div class="text-right pb-2 px-4">
+              <a href="{{post.url}}">Lire la suite</a>
+            </div>
+          </a>
+        </div>
+      {%- endfor -%}
+    </div>
+
     <div class="flex justify-center">
       <a class="button" href="/postlist">
         Voir toutes nos actus
       </a>
     </div>
 </div>
-<div class="">
-  <img src="assets/img/abeille-ruche.jpeg" />
-</div>
+
