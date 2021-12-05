@@ -45,7 +45,7 @@
   }
 
   h2 {
-    @apply text-4xl;
+    @apply text-4xl md:text-5xl;
     @apply font-sans;
     @apply mb-8;
 

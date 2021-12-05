@@ -66,26 +66,28 @@ title: La Miellerie d'Amélie - Accueil
 </div>
 
 {# <img src="assets/img/honey-half.svg" class="w-full" /> #}
-<div class="px-4 my-20 md:grid grid-cols-3 gap-8 container mx-auto">
+<div class="px-4 my-20 md:grid grid-cols-2 gap-8 container mx-auto md:h-screen">
   {# À la confluence de l'Oise et de la Seine, la Miellerie d'Amélie vous souhaite la bienvenue ! #}
-  <div class="description mt-4 mb-8 md:mt-0">
-    {% set title = 'Présentation' %}
-    {% set color = 'bright' %}
-    {% include "components/title.njk" %}
-    <p class="mb-4">
-    La Miellerie d'Amélie se partage entre deux ruchers du Val d'Oise.
+  <div class="description mt-4 mb-8 md:mt-0 md:h-full md:flex md:flex-col md:justify-center">
+    <div class="md:px-20 animate-fade-in-down-0">
+      {% set title = 'Présentation' %}
+      {% set color = 'bright' %}
+      {% include "components/title.njk" %}
+      <p class="mb-4 md:text-xl">
+        La Miellerie d'Amélie se partage entre deux ruchers du Val d'Oise.
 
-    Grâce à un partenariat avec la commune de Neuville-sur-Oise et Herblay-sur-Seine,
-    nous produisons du miel et intervenons dans les écoles pour sensibiliser les enfants.
-    De la primaire au collège, tout est bon pour parler abeille !
-    </p>
+        Grâce à un partenariat avec la commune de Neuville-sur-Oise et Herblay-sur-Seine,
+        nous produisons du miel et intervenons dans les écoles pour sensibiliser les enfants.
+        De la primaire au collège, tout est bon pour parler abeille !
+      </p>
+    </div>
   </div>
-  <div>
-    <img src="assets/img/rucher-de-neuville.jpeg" class="w-full h-60 object-cover rounded-xl" />
+  <div class="md:flex md:items-center animate-fade-in-down-1 opacity-0">
+    <img src="assets/img/rucher-de-neuville.jpeg" class="w-full h-140 object-cover rounded-xl" />
   </div>
-  <div class="hidden md:block">
+  {# <div class="hidden md:block">
     <img src="assets/img/rucher.jpeg" class="w-full h-60 object-cover rounded-xl" />
-  </div>
+  </div> #}
 </div>
 <img src="assets/img/honey-half.svg" class="w-full" />
 <div class="py-4 bg-primary">
