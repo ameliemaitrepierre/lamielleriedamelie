@@ -64,7 +64,7 @@ title: La Miellerie d'Amélie - Accueil
     <img src="assets/img/icon/arrow.svg" />
   </div>
 </div>
-
+<div class="animate-fade-in-down hidden"></div>
 {# <img src="assets/img/honey-half.svg" class="w-full" /> #}
 <div class="px-4 my-20 md:grid grid-cols-2 gap-8 container mx-auto md:h-screen">
   {# À la confluence de l'Oise et de la Seine, la Miellerie d'Amélie vous souhaite la bienvenue ! #}
@@ -82,12 +82,12 @@ title: La Miellerie d'Amélie - Accueil
       </p>
     </div>
   </div>
-  <div class="md:flex md:items-center opacity-0 js-interaction">
+  <div class="hidden md:items-center js-interaction">
     <img src="assets/img/rucher-de-neuville.jpeg" class="w-full h-140 object-cover rounded-xl" />
   </div>
-  {# <div class="hidden md:block">
-    <img src="assets/img/rucher.jpeg" class="w-full h-60 object-cover rounded-xl" />
-  </div> #}
+  <div class="md:items-center md:flex js-interaction">
+    <img src="assets/img/rucher.jpeg" class="w-full h-140 object-cover rounded-xl" />
+  </div>
 </div>
 <img src="assets/img/honey-half.svg" class="w-full" />
 <div class="py-4 bg-primary">
@@ -171,5 +171,22 @@ title: La Miellerie d'Amélie - Accueil
         Voir toutes nos actus
       </a>
     </div>
+</div>
+<img src="assets/img/honey-half.svg" class="w-full" />
+<div class="py-4 bg-primary">
+  <div class="text-center mt-12 mb-20">
+    {% set title = 'Contactez-nous' %}
+    {% set color = 'dark' %}
+    {% include "components/title.njk" %}
+  </div>
+  <div class="text-center md:w-[520px] md:mx-auto mt-12">
+    <p>
+      Vous pouvez nous contacter directement via le formulaire ci-dessous ou par mail directement miellerie.amelie@protonmail.com ou par téléphone au 07........
+    </p>
+  </div>
+</div>
+<img src="assets/img/honey-half.svg" class="w-full rotate-180" />
+<div class="footer">
+
 </div>
 

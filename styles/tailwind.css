@@ -76,19 +76,18 @@
     hover:translate-x-1 hover:-translate-y-1 hover:shadow-cta transition;
   }
 
+  .js-interaction {
+    opacity: 0;
+  }
+
   .button.primaryBg {
     @apply hover:shadow-ctaBg;
   }
 
   .dark-underline {
-    @apply absolute bottom-0.5 left-0 h-2 w-full bg-primary600 opacity-60 rounded-full;
+    @apply absolute -bottom-1.5 left-0 h-2 w-full bg-primary600 opacity-60 rounded-full;
   }
   .bright-underline {
-    @apply absolute bottom-0.5 left-0 h-2 w-full bg-primary opacity-60   rounded-full;
+    @apply absolute -bottom-1.5 left-0 h-2 w-full bg-primary opacity-60 rounded-full;
   }
 }
-
-/* 
-svg.svg {
-  min-width: 550px;
-} */

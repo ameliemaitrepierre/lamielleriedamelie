@@ -9,20 +9,19 @@ module.exports = {
   theme: {
     extend: {
       keyframes: {
-        'fade-in-down': {
-            '0%': {
-                opacity: '0',
-                transform: 'translateY(-50px)'
-            },
-            '100%': {
-                opacity: '1',
-                transform: 'translateY(0)'
-            },
+        'animate-fade-in-down': {
+          '0%': {
+              opacity: '0',
+              transform: 'translateY(-50px)'
+          },
+          '100%': {
+              opacity: '1',
+              transform: 'translateY(0)'
+          },
         }
       },
       animation: {
-          'fade-in-down-0': 'fade-in-down 0.5s ease-out forwards',
-          'fade-in-down-1': 'fade-in-down 0.5s ease-out 0.4s forwards'
+        'fade-in-down': 'animate-fade-in-down .5s ease-out forwards'
       },
       colors: {
         primary: '#FDDD64',
