@@ -8,6 +8,22 @@
   }
 }
 
+@layer components {
+  input, textarea {
+    width: 100%;
+    height: 60px;
+    @apply border border-black bg-transparent placeholder-primary600 font-light rounded-lg text-lg
+    py-2
+    px-4
+    tracking-wider
+    focus:outline-none
+    mb-4
+  }
+  textarea {
+    height: 200px;
+  }
+}
+
 @layer base {
   @font-face {
     font-family: 'Adlery Pro';
@@ -73,6 +89,7 @@
     py-2
     px-4
     uppercase
+    tracking-wider
     hover:translate-x-1 hover:-translate-y-1 hover:shadow-cta transition;
   }
 

@@ -174,19 +174,33 @@ title: La Miellerie d'Amélie - Accueil
 </div>
 <img src="assets/img/honey-half.svg" class="w-full" />
 <div class="py-4 bg-primary">
-  <div class="text-center mt-12 mb-20">
+  <div class="text-center mt-12 mb-8">
     {% set title = 'Contactez-nous' %}
     {% set color = 'dark' %}
     {% include "components/title.njk" %}
   </div>
   <div class="text-center md:w-[520px] md:mx-auto mt-12">
-    <p>
+    <p class="mb-4">
       Vous pouvez nous contacter directement via le formulaire ci-dessous ou par mail directement miellerie.amelie@protonmail.com ou par téléphone au 07........
     </p>
+    <form name="contact" method="POST" data-netlify="true">
+      <p>
+        <label><input type="email" name="email" placeholder="adresse email" /></label>
+      </p>
+      <p>
+        <label><textarea name="message" placeholder="message"></textarea></label>
+      </p>
+      <p>
+        <button type="submit" class="button">Envoyer</button>
+      </p>
+    </form>
+
   </div>
 </div>
 <img src="assets/img/honey-half.svg" class="w-full rotate-180" />
 <div class="footer">
-
+  <div class="text-center my-8">
+    © Copyright 2021 - La Miellerie d’Amélie
+  </div>
 </div>
 
