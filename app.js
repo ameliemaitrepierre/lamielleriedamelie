@@ -19,4 +19,18 @@ document.addEventListener("DOMContentLoaded", function() {
   spies.forEach(spy => {
     observer.observe(spy);
   })
+
+
+  document.getElementById('menu-btn').addEventListener('click', (e) => {
+    e.preventDefault()
+    let target = e.target
+    console.log(this)
+    if (target.classList.contains('open')) {
+      target.classList.remove('open')
+      target.classList.add('close')
+    } else {
+      target.classList.remove('close')
+      target.classList.add('open')
+    }
+  })
 });
