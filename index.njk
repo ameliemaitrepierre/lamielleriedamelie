@@ -152,11 +152,11 @@ title: La Miellerie d'Amélie - Accueil
     <div class="container md:mb-8">
       {%- for post in collections.post | head(-3) -%}
         <div class="border-solid border-2 border-black
-        mx-2
+        md:mx-2
         w-full
         md:flex
         rounded-xl mb-8 overflow-hidden">
-            <div class="flex-none w-64 overflow-hidden">
+            <div class="flex-none max-h-full md:max-w-max md:w-64 overflow-hidden">
               <img src="{{post.data.image}}" class="h-full w-full object-cover" />
             </div>
             <div class="p-8">
