@@ -1,7 +1,21 @@
 ---
 layout: base.njk
+title: La Miellerie d'Amélie - Actualités
+pagination:
+  data: collections.post
+  size: 2
+  alias: posts
+  reverse: true
 ---
 
-{% include "header.njk" %}
+<ol>
+{%- for post in posts %}
+  <li>{{ post.data.title }}</li>
+{% endfor -%}
+</ol>
 
-Ici la liste des articles
+{%- for pageEntry in pagination.pages %}
+    <li><a href="{{ pagination.hrefs[ loop.index0 ] }}"{% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}>Page {{ loop.index }}</a></li>
+{%- endfor %}
+
+Ici la liste des articles kjdfb
