@@ -150,7 +150,7 @@ title: La Miellerie d'Amélie - Accueil
       {% include "components/title.njk" %}
     </div>
     <div class="container md:mb-8">
-      {%- for post in collections.post | head(-4) -%}
+      {%- for post in collections.post | head(-3) -%}
         <div class="border-solid border-2 border-black
         mx-2
         w-full
@@ -159,10 +159,11 @@ title: La Miellerie d'Amélie - Accueil
             <div class="flex-none w-64 overflow-hidden">
               <img src="{{post.data.image}}" class="h-full w-full object-cover" />
             </div>
-            <div class="p-4">
+            <div class="p-8">
               <h3>
                 {{ post.data.title }}
               </h3>
+              <div><i>le {{post.date.toLocaleDateString()}}</i></div>
               <p>{{ post.templateContent | safe }}</p>
             </div>
             {# <div class="text-right pb-2 px-4">
