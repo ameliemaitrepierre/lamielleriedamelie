@@ -60,11 +60,14 @@ title: La Miellerie d'Amélie - Accueil
     <p class="subtitle">ENTRE SEINE ET OISE</p>
   </div>
   <div class="absolute bottom-4">
-    <img src="assets/img/logo.png" class="w-[150px]" />
+    <a href="#presentation" class="flex items-center group">
+      <img src="assets/img/logo.png" class="w-[150px] group-hover:-rotate-12 transition" />
+      <img src="assets/img/up-arrow.png" class="opacity-0 group-hover:opacity-100 group-hover:translate-y-2 transition rotate-180 h-12" alt="">
+    </a>
   </div>
 </div>
 {# <img src="assets/img/honey-half.svg" class="w-full" /> #}
-<div class="px-4 py-12 pt-24 md:grid grid-cols-2 gap-8 container mx-auto">
+<div class="px-4 py-12 pt-24 md:grid grid-cols-2 gap-8 container mx-auto" id="presentation">
   {# À la confluence de l'Oise et de la Seine, la Miellerie d'Amélie vous souhaite la bienvenue ! #}
   <div class="description mt-4 mb-8 md:mt-0 md:h-full md:flex md:flex-col md:justify-center">
     <div class="js-interaction md:px-20">
@@ -186,10 +189,10 @@ title: La Miellerie d'Amélie - Accueil
       </p>
       <form name="site-lamielleriedamelie" method="POST" data-netlify="true">
         <p>
-          <label><input type="email" name="email" placeholder="adresse email" required /></label>
+          <label><input type="email" name="email" placeholder="adresse email" class="focus:border-2" required /></label>
         </p>
         <p>
-          <label><textarea name="message" placeholder="message" required></textarea></label>
+          <label><textarea name="message" placeholder="message" class="focus:border-2" required></textarea></label>
         </p>
         <p>
           <button type="submit" class="button">Envoyer</button>
@@ -200,9 +203,5 @@ title: La Miellerie d'Amélie - Accueil
   </div>
   <img src="assets/img/honey-half.svg" class="w-full rotate-180" />
 </div>
-<div class="footer">
-  <div class="text-center my-8">
-    © Copyright 2021 - La Miellerie d’Amélie
-  </div>
-</div>
 
+{% include "footer.njk" %}
