@@ -1,3 +1,7 @@
-# Eleventy Tailwind Starter
+# La Miellerie d'Amélie
 
-Based on [CSS tricks tutorial](https://css-tricks.com/eleventy-starter-with-tailwind-css-alpine-js/)
+Basé sur [CSS tricks tutorial](https://css-tricks.com/eleventy-starter-with-tailwind-css-alpine-js/)
+
+# Comment éditer une actualité
+
+[Documentation markdown](https://www.markdownguide.org/basic-syntax/)
