@@ -7,21 +7,11 @@ document.addEventListener("DOMContentLoaded", function() {
     })
   });
 
-  const spies = document.querySelectorAll('.js-interaction')
-  spies.forEach(spy => {
-    observer.observe(spy);
-  })
+  if (document.querySelectorAll('.js-interaction').length > 0) {
+    const spies = document.querySelectorAll('.js-interaction')
+    spies.forEach(spy => {
+      observer.observe(spy);
+    })
+  }
 
-
-  document.getElementById('menu-btn').addEventListener('click', (e) => {
-    e.preventDefault()
-    let target = e.target
-    if (target.classList.contains('open')) {
-      target.classList.remove('open')
-      target.classList.add('close')
-    } else {
-      target.classList.remove('close')
-      target.classList.add('open')
-    }
-  })
 });
