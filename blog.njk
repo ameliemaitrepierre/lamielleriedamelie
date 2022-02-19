@@ -8,14 +8,56 @@ pagination:
   reverse: true
 ---
 
-<ol>
-{%- for post in posts %}
-  <li>{{ post.data.title }}</li>
-{% endfor -%}
-</ol>
+<div class="sticky top-0">
+  <a href="/" class="flex align-middle p-4 w-32">
+    <img src="/assets/img/up-arrow.png" class="w-8 -rotate-90 mr-2" alt="">
+    <span>retour</span>
+  </a>
+</div>
+<div class="py-12">
+  <img src="/assets/img/honey-half.svg" class="w-full" />
+  <div class="py-12 bg-primary px-4 md:px-0">
+    <div class="text-center">
+      {% set title = 'Nos actualités' %}
+      {% set color = 'dark' %}
+      {% include "components/title.njk" %}
+    </div>
+  </div>
+  <img src="/assets/img/honey-half.svg" class="w-full rotate-180" />
+</div>
+<div class="py-12 px-4 container mx-auto">
+  <div class="container md:mb-4">
+    {%- for post in posts %}
+      <div class="border-solid border-2 border-black
+      md:mx-2
+      w-full
+      md:flex
+      rounded-xl mb-8 overflow-hidden">
+          <div class="flex-none max-h-64 md:max-h-full md:max-w-max md:w-64 overflow-hidden 
+          {% if loop.index % 2 === 0 %}order-1{% endif %}">
+            <img src="{{post.data.image}}" class="h-full w-full object-cover" />
+          </div>
+          <div class="flex-auto p-8">
+            <h3>
+              {{ post.data.title }}
+            </h3>
+            <div class="pb-4"><i>le {{post.date.toLocaleDateString()}}</i></div>
+            <p>{{ post.templateContent | safe }}</p>
+          </div>
+      </div>
+    {%- endfor -%}
+  </div>
+  <div class="flex justify-between">
+    <div>{% if pagination.href.previous %}
+      <a href="{{ pagination.href.previous }}">page précedente</a>{% else %}{% endif %}
+    </div>
+{# {%- for pageEntry in pagination.pages %}
+    <div><a href="{{ pagination.hrefs[ loop.index0 ] }}"{% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}>Page {{ loop.index }}</a></div>
+{%- endfor %} #}
+    <div>{% if pagination.href.next %}<a href="{{ pagination.href.next }}">page suivante</a>{% else %}{% endif %}</div>
+  </div>
+</div>
 
-{%- for pageEntry in pagination.pages %}
-    <li><a href="{{ pagination.hrefs[ loop.index0 ] }}"{% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}>Page {{ loop.index }}</a></li>
-{%- endfor %}
 
-Ici la liste des articles kjdfb
+
+{% include "footer.njk" %}
