@@ -150,25 +150,23 @@ title: La Miellerie d'Amélie - Accueil
       {% include "components/title.njk" %}
     </div>
     <div class="container md:mb-8">
-      {%- for post in collections.post | head(-3) -%}
+      {%- for post in collections.post | head(-4) | reverse -%}
         <div class="border-solid border-2 border-black
         md:mx-2
         w-full
         md:flex
         rounded-xl mb-8 overflow-hidden">
-            <div class="flex-none max-h-full md:max-w-max md:w-64 overflow-hidden">
+            <div class="flex-none max-h-64 md:max-h-full md:max-w-max md:w-64 overflow-hidden 
+            {% if loop.index % 2 === 0 %}order-1{% endif %}">
               <img src="{{post.data.image}}" class="h-full w-full object-cover" />
             </div>
-            <div class="p-8">
+            <div class="flex-auto p-8">
               <h3>
                 {{ post.data.title }}
               </h3>
-              <div><i>le {{post.date.toLocaleDateString()}}</i></div>
+              <div class="pb-4"><i>le {{post.date.toLocaleDateString()}}</i></div>
               <p>{{ post.templateContent | safe }}</p>
             </div>
-            {# <div class="text-right pb-2 px-4">
-              <a href="{{post.url}}">Lire la suite</a>
-            </div> #}
         </div>
       {%- endfor -%}
     </div>
