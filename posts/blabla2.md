@@ -1,7 +1,7 @@
 ---
 tags: post
 title: Blabla 2
-image: "assets/img/ruchier.jpeg"
+image: /assets/img/ruchier.jpeg
 layout: post.njk
 date: 2022-02-19
 ---
