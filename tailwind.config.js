@@ -31,9 +31,7 @@ module.exports = {
         xl: "30px"
       },
       boxShadow: {
-        cta: "-2px 2px 0px 2px #FEDD64",
-        ctaHover: "-4px 4px 0px 4px #FEDD64",
-        ctaBg: "-2px 2px 0px 2px #000000"
+        cta: "-2px 2px 0px 2px #000000",
       },
       fontFamily: {
         sans: ['Josefin Sans', 'Arial', 'sans-serif'],

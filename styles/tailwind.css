@@ -97,10 +97,6 @@
     opacity: 0;
   }
 
-  .button.primaryBg {
-    @apply hover:shadow-ctaBg;
-  }
-
   .dark-underline {
     @apply absolute -bottom-1.5 left-0 h-2 w-full bg-primary600 opacity-60 rounded-full;
   }
