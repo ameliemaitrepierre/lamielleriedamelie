@@ -1,11 +1,5 @@
 module.exports = {
-  mode: 'jit',
-  purge: {
-    content: ['_site/**/*.html', '*.js'],
-    options: {
-      safelist: [],
-    },
-  },
+  content: ['_site/**/*.html', '*.js'],
   theme: {
     extend: {
       keyframes: {
@@ -45,6 +39,5 @@ module.exports = {
       }
     },
   },
-  variants: {},
   plugins: [],
 }
